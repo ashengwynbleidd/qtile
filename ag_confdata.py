@@ -1,8 +1,17 @@
 # ----------Reference colors ----------
 
-# colorsceme_1: #2b2b2b #3f3f3f #f9f7f3 #da4939 #a5c261 #ffc66d #6d9cbe #b6b3eb #519f8c
-
-# colorsceme_2: #272822 #75715e #f8f8f2 #f92672 #a6e22e #f4bf75 #66d9ef #ae81ff #a1efe4
+colors = {
+    'black':   '#1a1816',
+    'white':   '#f9f7f3',
+    'red':     '#ff5640',
+    'green':   '#d9ff80',
+    'yellow':  '#ffc66d',
+    'blue':    '#92d1ff',
+    'magenta': '#c5c2ff',
+    'cyan':    '#82ffe1',
+    'grey1':   '#272822',
+    'grey2':   '#3f3f3f',
+}
 
 # ---------- Layouts config ----------
 
@@ -11,15 +20,15 @@
 
 layout_cfg = {
     'monadtall': {
-        'border_normal': '#2b2b2b',
-        'border_focus': '#da4939',
-        'border_width': 3,
-        'margin': 5,
+        'border_normal': colors['grey1'],
+        'border_focus':  colors['red'],
+        'border_width':  3,
+        'margin':        5,
     },
     'floating': {
-        'border_normal': '#2b2b2b',
-        'border_focus': '#519f8c',
-        'border_width': 3,
+        'border_normal': colors['grey2'],
+        'border_focus':  colors['cyan'],
+        'border_width':  3,
     }
 }
 
@@ -79,48 +88,48 @@ group_cfg = {
 widget_conf = {
     # ----------group display----------
     'groupbox': {
-        'highlight_method': 'block',
-        'block_highlight_text_color': '#2b2b2b',
-        'other_current_screen_border': '#3f3f3f',
-        'this_current_screen_border': '#da4939',
-        'other_screen_border': '#3f3f3f',
-        'this_screen_border': '#da4939',
-        'urgent_border': '#ffc66d',
-        'urgent_text': '#da4939',
-        'foreground': '#f9f7f3',
-        'background': '#2b2b2b',
-        'inactive': '#ffc66d',
-        'active': '#da4939',
-        'rounded': False,
-        'fontsize': 22,
+        'highlight_method':            'block',
+        'block_highlight_text_color':  colors['black'],
+        'other_current_screen_border': colors['grey2'],
+        'this_current_screen_border':  colors['red'],
+        'other_screen_border':         colors['grey2'],
+        'this_screen_border':          colors['red'],
+        'urgent_border':               colors['yellow'],
+        'urgent_text':                 colors['red'],
+        'foreground':                  colors['white'],
+        'background':                  colors['black'],
+        'inactive':                    colors['yellow'],
+        'active':                      colors['red'],
+        'rounded':                     False,
+        'fontsize':                    22,
     },
     # ----------qtile prompt----------
     'prompt': {
-        'record_history': True,
+        'record_history':      True,
         'ignore_dups_history': True,
-        'max_history': 50,
-        'cursor_color': '#da4939',
-        'foreground': '#da4939',
-        'background': '#2b2b2b',
-        'fontsize': 14,
-        'padding': 25,
+        'max_history':         50,
+        'cursor_color':        colors['red'],
+        'foreground':          colors['red'],
+        'background':          colors['black'],
+        'fontsize':            14,
+        'padding':             25,
     },
     # ----------battery percent----------
     'battery': {
-        'format': '{char} {percent:2.0%}',
-        'low_foreground': '#da4939',
-        'foreground': '#2b2b2b',
-        'background': '#ffc66d',
-        'discharge_char': '',
-        'charge_char': '',
-        'unknown_char': '',
-        'empty_char': '',
-        'full_char': '',
+        'format':          '{char} {percent:2.0%}',
+        'low_foreground':  colors['red'],
+        'foreground':      colors['black'],
+        'background':      colors['yellow'],
+        'discharge_char':  '',
+        'charge_char':     '',
+        'unknown_char':    '',
+        'empty_char':      '',
+        'full_char':       '',
         'show_short_text': False,
-        'low_percentage': 0.25,
+        'low_percentage':  0.25,
         'update_interval': 5,
-        'fontsize': 15,
-        'padding': 10,
+        'fontsize':        14,
+        'padding':         8,
     },
     # ----------clock & time----------
     'clock': {
@@ -139,31 +148,31 @@ widget_conf = {
     },
     # ----------text decoration----------
     'infotext': {
-        'foreground': '#ffc66d',
-        'background': '#3f3f3f',
-        'fontsize': 12,
-        'padding': 8,
+        'foreground': colors['yellow'],
+        'background': colors['black'],
+        'fontsize':   12,
+        'padding':    8,
     },
     # ----------layout display----------
     'layouticon': {
-        'background': '#519f8c',
-        'padding': 10,
-        'scale': 0.85,
+        'background': colors['grey2'],
+        'padding':    10,
+        'scale':      0.85,
     },
     # ------------------------------
-    'blank': {'background': '#2b2b2b'},
+    'blank': {'background': colors['black']},
 }
 
 # ---------- Screen config ----------
 
 screen_cfg = {
     '1': {
-        'opacity': 0.8,
-        'size': 25
+        'opacity': 0.85,
+        'size':    25
     },
     '2': {
-        'opacity': 0.8,
-        'size': 25
+        'opacity': 0.85,
+        'size':    25
     },
 }
 
