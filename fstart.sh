@@ -2,6 +2,7 @@
 
 #-------------SET WALLPAPER----------------------
 
-xwallpaper --zoom ~/Downloads/wallpaper2.jpg
+[ -d ~/.config/qtile/wallpapers ] && \
+    xwallpaper --zoom ~/.config/qtile/wallpapers/art_disco-elysium_1.jpg
 
 #------------------------------------------------
